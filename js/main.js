@@ -17,7 +17,28 @@ $(function() {
         autoplay:true,
         autoplayTimeout:3000,
         autoplayHoverPause:true,
-        margin: 10
+        margin: 10,
+        responsive: {
+            0: {
+                items: 2
+            },
+            768: {
+                items: 4
+            }
+        }
+    })
+    // mobile menu event
+    $(document).on('click', '.js-nav-menu', function() {
+        $(this).next('.mobile-menu ').addClass('open');
+    })
+    $(document).on('click', '.js-close-menu', function() {
+        $(this).parent('.mobile-menu ').removeClass('open');
+    })
+    $(document).on('click', '.js-m-nav>li', function(e) {
+        if($(this).find('ul').length >0) {
+            e.preventDefault();
+            $(this).toggleClass('show');
+        }
     })
 })
 $(function() {
