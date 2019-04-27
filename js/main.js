@@ -1,4 +1,9 @@
 $(function() {
+    $(document).on('click', '.js-shower', function() {
+        $(this).find('img').toggle('slow');
+    })
+})
+$(function() {
     // global js
     //  config owl-carsoul
     $('.home-carousel').owlCarousel({
