@@ -9542,6 +9542,67 @@ footer {
   flex: 0 0 20%;
 }
 
+.product-details .attrbute-tab {
+  margin-bottom: 30px;
+}
+
+.product-details .attrbute-tab ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.product-details .attrbute-tab ul li {
+  position: relative;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.product-details .attrbute-tab ul li + li::before {
+  position: absolute;
+  left: 0;
+  content: '/';
+  color: #0099cc;
+}
+
+.product-details .attrbute-tab ul li::after {
+  content: '';
+  border-bottom: 2px solid #0099cc;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 0;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.product-details .attrbute-tab ul li:hover::after,
+.product-details .attrbute-tab ul li.active::after {
+  width: 50%;
+}
+
+.product-details .attrbute-tab-content {
+  padding: 0 30px;
+}
+
+.product-details .attrbute-tab-content .tab-content {
+  display: none;
+}
+
+.product-details .attrbute-tab-content .tab-content.active {
+  display: block;
+}
+
 .product-details-menu .details-menu {
   font-size: 18px;
   line-height: 1;
@@ -9580,6 +9641,10 @@ footer {
 
 .product-details-menu ul li a:hover {
   color: rgba(0, 153, 204, 0.5);
+}
+
+.product-details-menu ul li:last-child {
+  border-bottom: 0;
 }
 /**
  * Owl Carousel v2.3.4

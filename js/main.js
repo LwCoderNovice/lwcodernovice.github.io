@@ -1,4 +1,16 @@
 $(function() {
+    // JS tab 
+    $(document).on('click', '.js-tab-component .attrbute-tab li', function() {
+        var $click_li = $(this);
+        var $click_li_index = $click_li.index();
+        var $component_content = $click_li.parents('.js-tab-component').find('.attrbute-tab-content .tab-content');
+        $click_li.siblings().removeClass('active');
+        $click_li.addClass('active');
+        $component_content.removeClass('active');
+        $component_content.eq($click_li_index).addClass('active');
+    })
+})
+$(function() {
     $(document).on('click', '.js-shower', function() {
         $(this).find('img').toggle('slow');
     })
