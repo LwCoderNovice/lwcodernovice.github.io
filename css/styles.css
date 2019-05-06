@@ -9575,8 +9575,8 @@ footer {
 .product-details .attrbute-tab ul li::after {
   content: '';
   border-bottom: 2px solid #0099cc;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   width: 0;
   display: block;
   position: absolute;
@@ -9588,7 +9588,7 @@ footer {
 
 .product-details .attrbute-tab ul li:hover::after,
 .product-details .attrbute-tab ul li.active::after {
-  width: 50%;
+  width: 40%;
 }
 
 .product-details .attrbute-tab-content {
