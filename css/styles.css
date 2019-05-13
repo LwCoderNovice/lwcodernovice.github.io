@@ -8531,6 +8531,92 @@ a:hover {
   display: block;
 }
 
+.scroll-silde-controller {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.scroll-silde-controller .silde-body .silde-body-item {
+  display: block;
+  position: relative;
+}
+
+.scroll-silde-controller .silde-nav {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 200px;
+  flex: 0 0 200px;
+}
+
+.scroll-silde-controller .silde-nav .nav-item {
+  height: 100%;
+}
+
+.scroll-silde-controller .silde-nav .nav-item-tag {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 60px;
+  position: relative;
+}
+
+.scroll-silde-controller .silde-nav .nav-item-tag > span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background: #ffffff;
+}
+
+.scroll-silde-controller .silde-nav .nav-item-tag > span.focus {
+  background: #0099cc;
+  border-color: #0099cc;
+}
+
+.scroll-silde-controller .silde-nav .nav-item-tag:after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background: #cccccc;
+  height: 100%;
+  z-index: -1;
+}
+
+table {
+  margin-bottom: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table thead {
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-weight: normal;
+}
+
+table th,
+table td {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+}
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?curqje");
@@ -9758,6 +9844,18 @@ footer {
 .contact-us .contact-item > span:first-child {
   font-size: 24px;
   margin-right: 15px;
+}
+
+.body-item-header {
+  font-size: 18px;
+  padding: 20px 0;
+  margin-bottom: 15px;
+}
+
+.body-item-header span {
+  display: inline-block;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #0099cc;
 }
 /**
  * Owl Carousel v2.3.4

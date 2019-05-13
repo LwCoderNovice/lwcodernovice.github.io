@@ -9,6 +9,32 @@ $(function() {
         $component_content.removeClass('active');
         $component_content.eq($click_li_index).addClass('active');
     })
+    // tab controller
+    $(document).on('click', '.tab-component-handler .handler-item', function(e) {
+        e.preventDefault();
+        var $_index = $(this).index();
+        var $_body = $(this).parents('.tab-component-handler').next('.tab-component-body');
+        var $_bodyItem = $_body.find('.body-item');
+        $_bodyItem.siblings().removeClass('active');
+        $_bodyItem.eq($_index).addClass('active');
+    })
+    // init scroll controller
+    if($('.scroll-silde-controller').length) {
+        var $item = $('.silde-body .silde-body-item');
+        var $_length = $item.length;
+        var html = '';
+        for(var i= 0; i< $_length; i++) {
+            if(i === 0) {
+                html += '<span class="focus"></span>';
+            }
+            html += '<span></span>';
+        }
+        $('.scroll-silde-controller').find('.silde-nav .nav-item-tag').html(html);
+        // focus handler nav
+        $(document).on('scroll', function() {
+            console.log(1);
+        })
+    }
 })
 $(function() {
     $(document).on('click', '.js-shower', function() {
