@@ -30,7 +30,7 @@ $(function() {
             html += '<span></span>';
         }
         $('.scroll-silde-controller').find('.silde-nav .nav-item-tag').html(html);
-        // focus handler nav
+        // focus handler nav TODO
         $(document).on('scroll', function() {
             console.log(1);
         })
