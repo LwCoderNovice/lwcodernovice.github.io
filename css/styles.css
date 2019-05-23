@@ -8672,6 +8672,7 @@ table td {
 
 .product-pargraph {
   margin-bottom: 40px;
+  position: relative;
 }
 
 .product-pargraph .content-name {
@@ -8699,6 +8700,27 @@ table td {
 
 .product-pargraph .img > img {
   max-width: 100%;
+}
+
+.product-pargraph.background .content {
+  position: absolute;
+  padding-top: 40px;
+}
+
+.product-pargraph.background .content.left {
+  text-align: left;
+  left: 0;
+}
+
+.product-pargraph.background .content.center {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.product-pargraph.background .content.right {
+  text-align: right;
+  right: 0;
 }
 
 @font-face {
