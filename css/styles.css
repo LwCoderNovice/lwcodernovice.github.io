@@ -10027,6 +10027,31 @@ footer {
 .single-about div img {
   width: 100%;
 }
+
+.single-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 40px;
+}
+
+.single-details .single-left {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  padding-right: 30px;
+}
+
+.single-details .single-left .single-title {
+  font-size: 18px;
+  text-align: center;
+}
+
+.single-details .single-left .single-title > span {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #cccccc;
+  display: inline-block;
+}
 /**
  * Owl Carousel v2.3.4
  * Copyright 2013-2018 David Deutsch
