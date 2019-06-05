@@ -117,3 +117,19 @@ $(function() {
         }
       });
 })
+$(function() {
+
+    // Scroll Event
+    $(document).on('scroll', function() {
+        var _headerHandler = true;
+
+        if(_headerHandler && $(window).scrollTop() > 1) {
+            $('body').addClass('fixed');
+            _headerHandler = false;
+        }
+        if($(window).scrollTop() === 0) {
+            $('body').removeClass('fixed');
+            _headerHandler = true;
+        }
+    })
+})
